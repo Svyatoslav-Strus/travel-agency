@@ -8,19 +8,14 @@
   padding: 0;
   box-sizing: border-box; }
 
-/*input,
 button {
-    border: none;
-}
+  border: none; }
 
-input:focus,
-input:active,
-input:hover,
 button:focus,
 button:active,
 button:hover {
-    outline: none;
-}*/
+  outline: none; }
+
 body {
   color: #ffffff;
   width: 1800px;
