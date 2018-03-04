@@ -1,12 +1,42 @@
+@font-face {
+    font-family: "Aleo";
+    src: url("../fonts/Aleo-Font/Webfont Kit/Regular/aleo-regular-webfont.ttf") format('ttf'),
+    url("../fonts/Aleo-Font/Webfont Kit/Regular/aleo-regular-webfont.woff") format('woff'),
+    url("../fonts/Aleo-Font/Webfont Kit/Regular/aleo-regular-webfont.woff2") format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
 $mainColor: #5474fd;
 $textColor: #ffffff;
 $josefin: "Josefin Sans", Arial, sans-serif;
+$aleo: "Aleo", "Times New Roman", serif;
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+/*input,
+button {
+    border: none;
+}
+
+input:focus,
+input:active,
+input:hover,
+button:focus,
+button:active,
+button:hover {
+    outline: none;
+}*/
 
 body {
     color: $textColor;
@@ -17,9 +47,7 @@ body {
         background: url("../images/Header_bg.png") center no-repeat;
         height: 740px;
         width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flexColumn;
 
         .header-title {
             margin-top: 265px;
@@ -44,25 +72,47 @@ body {
         }
 
         form {
-            width: 650px;
-            height: 60px;
             font-size: 0;
+            width: 650px;
             margin-top: 50px;
+            height: 60px;
+            background-color: $textColor;
+            position: relative;
 
             input {
+                position: absolute;
+                top:0;
+                left:0;
                 width: 500px;
                 height: 60px;
+                color: #999999;
+                font-family: $josefin;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 26px;
+                letter-spacing: 2.8px;
+                text-align: center;
             }
 
             button {
+                position: absolute;
+                right: 0;
                 width: 150px;
                 height: 60px;
                 background-color: $mainColor;
+                color: $textColor;
+                font-family: $aleo;
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: uppercase;
+                letter-spacing: 1.4px;
+                border: solid 2px $textColor;
             }
         }
 
         .scroll-down {
             margin-top: 120px;
+            @include flexColumn;
 
             .scroll {
                 font-family: $josefin;
@@ -70,6 +120,7 @@ body {
                 font-weight: 400;
                 line-height: 26px;
                 letter-spacing: 2.8px;
+                margin-bottom: 15px;
             }
         }
     }
@@ -79,8 +130,44 @@ body {
         width: 100%;
         background-color: $mainColor;
 
-        .logo {
+        .content {
+            width: 1110px;
+            height: 100%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
 
+
+            .logo {
+                font-family: $josefin;
+                font-size: 24px;
+                font-weight: 700;
+                line-height: 1.08;
+                letter-spacing: 2.4px;
+                text-transform: uppercase;
+            }
+
+            nav {
+                ul {
+                    list-style: none;
+                    font-size: 0;
+
+                    li {
+                        display: inline-block;
+                        font-family: $aleo;
+                        font-size: 14px;
+                        font-weight: normal;
+                        line-height: 1.86;
+                        margin-right: 42px;
+                    }
+
+                    li:last-child {
+                        margin-right: 0px;
+                    }
+                }
+            }
         }
     }
 
@@ -88,35 +175,356 @@ body {
         height: 685px;
         width: 100%;
         background: url("../images/why_choose_us_bg.png") center no-repeat;
+        padding: 120px 0;
+
+        .content {
+            width: 1110px;
+            height: 445px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+
+            .choose-information {
+                width: 635px;
+                height: 100%;
+                padding-right: 105px;
+
+                .choose-title {
+                    margin-top: 84px;
+                    font-family: $aleo;
+                    font-size: 36px;
+                    font-weight: normal;
+                    font-style: normal;
+                    font-stretch: normal;
+                    line-height: 0.72;
+                }
+
+                .choose-description {
+                    margin-top: 35px;
+                    margin-bottom: 48px;
+                    font-family: $josefin;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 1.63;
+                    letter-spacing: 1px;
+                    color: #e8e8e8;
+                    white-space: pre-line;
+                }
+
+                button {
+                    width: 225px;
+                    height: 60px;
+                    background-color: #5474fd;
+                    font-family: $aleo;
+                    font-size: 16px;
+                    font-weight: normal;
+                    line-height: 1.63;
+                    letter-spacing: 1.2px;
+                    text-transform: uppercase;
+                    color: #ffffff;
+                }
+            }
+
+            .photo {
+                width: 475px;
+                height: 100%;
+                position: relative;
+
+                .first-photo {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: url("../images/why_choose_us_2.png");
+                    width: 350px;
+                    height: 220px;
+                }
+
+                .second-photo {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    background: url("../images/why_choose_us_1.png");
+                    width: 350px;
+                    height: 220px;
+                }
+            }
+        }
     }
 
     .instructions {
         height: 337px;
         width: 100%;
         background-color: #333333;
+
+        .content {
+            width: 1110px;
+            height: 100%;
+            margin: 0 auto;
+            @include flexColumn;
+
+            .icons {
+                @include flexColumn;
+
+                .waves {
+                    margin-top: 48px;
+                }
+
+                .icon-group {
+                    width: 860px;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
+
+            .icons-description {
+                margin-top: 32px;
+                width: 950px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+            }
+
+
+        }
     }
 
     .first-book {
         height: 700px;
         width: 100%;
         background: url("../images/book_now_1.png") center no-repeat;
+
+        .content {
+            width: 1110px;
+            margin: 0 auto;
+            height: 100%;
+            padding-top: 229px;
+
+            .first-book-now {
+                width: 540px;
+                height: 371px;
+                background-color: #232323;
+                opacity: 0.9;
+                padding: 50px 30px;
+
+                .country {
+                    font-family: $josefin;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 1.3;
+                    letter-spacing: 1.5px;
+                    color: #e8e8e8;
+                    margin-bottom: 35px;
+                }
+
+                .country-title {
+                    font-family: $josefin;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 1.3;
+                    color: #fefefe;
+                    text-transform: uppercase;
+                }
+
+                .country-description {
+                    margin-top: 24px;
+                    color: #e8e8e8;
+                    font-family: $josefin;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                }
+
+                button {
+                    margin-top: 40px;
+                    width: 225px;
+                    height: 60px;
+                    background-color: $mainColor;
+                    color: $textColor;
+                    font-family: $aleo;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.2px;
+                }
+            }
+        }
     }
 
     .second-book {
         height: 700px;
         width: 100%;
         background: url("../images/book_now_second.png") center no-repeat;
+
+        .content {
+            width: 1110px;
+            margin: 0 auto;
+            height: 100%;
+            padding-top: 229px;
+
+            .second-book-now {
+                float: right;
+                width: 540px;
+                height: 371px;
+                background-color: #232323;
+                opacity: 0.9;
+                padding: 50px 30px;
+
+                .country {
+                    font-family: $josefin;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 1.3;
+                    letter-spacing: 1.5px;
+                    color: #e8e8e8;
+                    margin-bottom: 35px;
+                }
+
+                .country-title {
+                    font-family: $josefin;
+                    font-size: 20px;
+                    font-weight: 400;
+                    line-height: 1.3;
+                    color: #fefefe;
+                    text-transform: uppercase;
+                }
+
+                .country-description {
+                    margin-top: 24px;
+                    color: #e8e8e8;
+                    font-family: $josefin;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                }
+
+                button {
+                    margin-top: 40px;
+                    width: 225px;
+                    height: 60px;
+                    background-color: $mainColor;
+                    color: $textColor;
+                    font-family: $aleo;
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 26px;
+                    text-transform: uppercase;
+                    letter-spacing: 1.2px;
+                }
+            }
+        }
     }
 
     .what {
         height: 731px;
         width: 100%;
         background: url("../images/testimonials_bg.png") center no-repeat;
+
+        .content {
+            width: 1110px;
+            height: 100%;
+            margin: 0 auto;
+            @include flexColumn;
+
+            .what-title {
+                margin-top: 120px;
+                margin-bottom: 95px;
+                font-family: Aleo;
+                font-size: 36px;
+                font-weight: 400;
+                line-height: 26px;
+            }
+
+            .review {
+
+                .slide {
+                    width: 100%;
+                    height: 284px;
+                    display: flex;
+                    flex-direction: row;
+
+                    .review-photo {
+                        background: url("../images/testimonials_1.png");
+                        width: 445px;
+                        height: 284px;
+                    }
+
+                    .review-information {
+                        background: #333333;
+                        width: 665px;
+                        height: 284px;
+                        padding: 50px 54px 48px 60px;
+
+                        .review-title {
+                            color: #fefefe;
+                            font-family: $josefin;
+                            font-size: 20px;
+                            font-weight: 400;
+                            line-height: 26px;
+                            text-transform: uppercase;
+                        }
+
+                        .review-description {
+                            color: #e8e8e8;
+                            font-family: $josefin;
+                            font-size: 16px;
+                            font-weight: 300;
+                            line-height: 26px;
+                        }
+                    }
+                }
+
+                .navigation {
+                    margin-top: 30px;
+                    float: right;
+
+                    button {
+                        width: 80px;
+                        height: 50px;
+                        background-color: #2a2b2b;
+                        border: solid 1px #ffffff;
+                    }
+
+                    button:first-child {
+                        margin-right: 15px;
+                    }
+                }
+            }
+        }
     }
 
     footer {
         height: 268px;
         width: 100%;
         background-color: #232323;
+        @include flexColumn;
+
+        .footer-title {
+            margin-top: 120px;
+            font-family: $josefin;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 26px;
+            text-transform: uppercase;
+            letter-spacing: 3.36px;
+        }
+
+        .footer-description {
+            margin-top: 12px;
+            font-family: $josefin;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 1.6px;
+        }
+
+        .social {
+            width: 170px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
     }
 }

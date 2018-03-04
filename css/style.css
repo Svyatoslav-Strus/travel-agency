@@ -1,8 +1,26 @@
+@font-face {
+  font-family: "Aleo";
+  src: url("../fonts/Aleo-Font/Webfont Kit/Regular/aleo-regular-webfont.ttf") format("ttf"), url("../fonts/Aleo-Font/Webfont Kit/Regular/aleo-regular-webfont.woff") format("woff"), url("../fonts/Aleo-Font/Webfont Kit/Regular/aleo-regular-webfont.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
+/*input,
+button {
+    border: none;
+}
+
+input:focus,
+input:active,
+input:hover,
+button:focus,
+button:active,
+button:hover {
+    outline: none;
+}*/
 body {
   color: #ffffff;
   width: 1800px;
@@ -31,52 +49,352 @@ body {
         line-height: 26px;
         letter-spacing: 6.8px; }
     body header form {
-      width: 650px;
-      height: 60px;
       font-size: 0;
-      margin-top: 50px; }
+      width: 650px;
+      margin-top: 50px;
+      height: 60px;
+      background-color: #ffffff;
+      position: relative; }
       body header form input {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 500px;
-        height: 60px; }
+        height: 60px;
+        color: #999999;
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 2.8px;
+        text-align: center; }
       body header form button {
+        position: absolute;
+        right: 0;
         width: 150px;
         height: 60px;
-        background-color: #5474fd; }
+        background-color: #5474fd;
+        color: #ffffff;
+        font-family: "Aleo", "Times New Roman", serif;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 1.4px;
+        border: solid 2px #ffffff; }
     body header .scroll-down {
-      margin-top: 120px; }
+      margin-top: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
       body header .scroll-down .scroll {
         font-family: "Josefin Sans", Arial, sans-serif;
         font-size: 14px;
         font-weight: 400;
         line-height: 26px;
-        letter-spacing: 2.8px; }
+        letter-spacing: 2.8px;
+        margin-bottom: 15px; }
   body .menu {
     height: 80px;
     width: 100%;
     background-color: #5474fd; }
+    body .menu .content {
+      width: 1110px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
+      body .menu .content .logo {
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.08;
+        letter-spacing: 2.4px;
+        text-transform: uppercase; }
+      body .menu .content nav ul {
+        list-style: none;
+        font-size: 0; }
+        body .menu .content nav ul li {
+          display: inline-block;
+          font-family: "Aleo", "Times New Roman", serif;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 1.86;
+          margin-right: 42px; }
+        body .menu .content nav ul li:last-child {
+          margin-right: 0px; }
   body .choose {
     height: 685px;
     width: 100%;
-    background: url("../images/why_choose_us_bg.png") center no-repeat; }
+    background: url("../images/why_choose_us_bg.png") center no-repeat;
+    padding: 120px 0; }
+    body .choose .content {
+      width: 1110px;
+      height: 445px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: row; }
+      body .choose .content .choose-information {
+        width: 635px;
+        height: 100%;
+        padding-right: 105px; }
+        body .choose .content .choose-information .choose-title {
+          margin-top: 84px;
+          font-family: "Aleo", "Times New Roman", serif;
+          font-size: 36px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.72; }
+        body .choose .content .choose-information .choose-description {
+          margin-top: 35px;
+          margin-bottom: 48px;
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 16px;
+          font-weight: 300;
+          line-height: 1.63;
+          letter-spacing: 1px;
+          color: #e8e8e8;
+          white-space: pre-line; }
+        body .choose .content .choose-information button {
+          width: 225px;
+          height: 60px;
+          background-color: #5474fd;
+          font-family: "Aleo", "Times New Roman", serif;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 1.63;
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+          color: #ffffff; }
+      body .choose .content .photo {
+        width: 475px;
+        height: 100%;
+        position: relative; }
+        body .choose .content .photo .first-photo {
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: url("../images/why_choose_us_2.png");
+          width: 350px;
+          height: 220px; }
+        body .choose .content .photo .second-photo {
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          background: url("../images/why_choose_us_1.png");
+          width: 350px;
+          height: 220px; }
   body .instructions {
     height: 337px;
     width: 100%;
     background-color: #333333; }
+    body .instructions .content {
+      width: 1110px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body .instructions .content .icons {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        body .instructions .content .icons .waves {
+          margin-top: 48px; }
+        body .instructions .content .icons .icon-group {
+          width: 860px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between; }
+      body .instructions .content .icons-description {
+        margin-top: 32px;
+        width: 950px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
   body .first-book {
     height: 700px;
     width: 100%;
     background: url("../images/book_now_1.png") center no-repeat; }
+    body .first-book .content {
+      width: 1110px;
+      margin: 0 auto;
+      height: 100%;
+      padding-top: 229px; }
+      body .first-book .content .first-book-now {
+        width: 540px;
+        height: 371px;
+        background-color: #232323;
+        opacity: 0.9;
+        padding: 50px 30px; }
+        body .first-book .content .first-book-now .country {
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1.3;
+          letter-spacing: 1.5px;
+          color: #e8e8e8;
+          margin-bottom: 35px; }
+        body .first-book .content .first-book-now .country-title {
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1.3;
+          color: #fefefe;
+          text-transform: uppercase; }
+        body .first-book .content .first-book-now .country-description {
+          margin-top: 24px;
+          color: #e8e8e8;
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px; }
+        body .first-book .content .first-book-now button {
+          margin-top: 40px;
+          width: 225px;
+          height: 60px;
+          background-color: #5474fd;
+          color: #ffffff;
+          font-family: "Aleo", "Times New Roman", serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          text-transform: uppercase;
+          letter-spacing: 1.2px; }
   body .second-book {
     height: 700px;
     width: 100%;
     background: url("../images/book_now_second.png") center no-repeat; }
+    body .second-book .content {
+      width: 1110px;
+      margin: 0 auto;
+      height: 100%;
+      padding-top: 229px; }
+      body .second-book .content .second-book-now {
+        float: right;
+        width: 540px;
+        height: 371px;
+        background-color: #232323;
+        opacity: 0.9;
+        padding: 50px 30px; }
+        body .second-book .content .second-book-now .country {
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1.3;
+          letter-spacing: 1.5px;
+          color: #e8e8e8;
+          margin-bottom: 35px; }
+        body .second-book .content .second-book-now .country-title {
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 1.3;
+          color: #fefefe;
+          text-transform: uppercase; }
+        body .second-book .content .second-book-now .country-description {
+          margin-top: 24px;
+          color: #e8e8e8;
+          font-family: "Josefin Sans", Arial, sans-serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px; }
+        body .second-book .content .second-book-now button {
+          margin-top: 40px;
+          width: 225px;
+          height: 60px;
+          background-color: #5474fd;
+          color: #ffffff;
+          font-family: "Aleo", "Times New Roman", serif;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 26px;
+          text-transform: uppercase;
+          letter-spacing: 1.2px; }
   body .what {
     height: 731px;
     width: 100%;
     background: url("../images/testimonials_bg.png") center no-repeat; }
+    body .what .content {
+      width: 1110px;
+      height: 100%;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      body .what .content .what-title {
+        margin-top: 120px;
+        margin-bottom: 95px;
+        font-family: Aleo;
+        font-size: 36px;
+        font-weight: 400;
+        line-height: 26px; }
+      body .what .content .review .slide {
+        width: 100%;
+        height: 284px;
+        display: flex;
+        flex-direction: row; }
+        body .what .content .review .slide .review-photo {
+          background: url("../images/testimonials_1.png");
+          width: 445px;
+          height: 284px; }
+        body .what .content .review .slide .review-information {
+          background: #333333;
+          width: 665px;
+          height: 284px;
+          padding: 50px 54px 48px 60px; }
+          body .what .content .review .slide .review-information .review-title {
+            color: #fefefe;
+            font-family: "Josefin Sans", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 26px;
+            text-transform: uppercase; }
+          body .what .content .review .slide .review-information .review-description {
+            color: #e8e8e8;
+            font-family: "Josefin Sans", Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 26px; }
+      body .what .content .review .navigation {
+        margin-top: 30px;
+        float: right; }
+        body .what .content .review .navigation button {
+          width: 80px;
+          height: 50px;
+          background-color: #2a2b2b;
+          border: solid 1px #ffffff; }
+        body .what .content .review .navigation button:first-child {
+          margin-right: 15px; }
   body footer {
     height: 268px;
     width: 100%;
-    background-color: #232323; }
+    background-color: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body footer .footer-title {
+      margin-top: 120px;
+      font-family: "Josefin Sans", Arial, sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 26px;
+      text-transform: uppercase;
+      letter-spacing: 3.36px; }
+    body footer .footer-description {
+      margin-top: 12px;
+      font-family: "Josefin Sans", Arial, sans-serif;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 26px;
+      letter-spacing: 1.6px; }
+    body footer .social {
+      width: 170px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
