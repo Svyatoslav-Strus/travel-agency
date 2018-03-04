@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  color: #ffffff;
+  width: 1800px;
+  padding: 15px; }
+  body header {
+    background: url("../images/Header_bg.png") center no-repeat;
+    height: 740px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    body header .header-title {
+      margin-top: 265px; }
+      body header .header-title .title {
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 0.54;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 4.8px; }
+      body header .header-title .description {
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 6.8px; }
+    body header form {
+      width: 650px;
+      height: 60px;
+      font-size: 0;
+      margin-top: 50px; }
+      body header form input {
+        width: 500px;
+        height: 60px; }
+      body header form button {
+        width: 150px;
+        height: 60px;
+        background-color: #5474fd; }
+    body header .scroll-down {
+      margin-top: 120px; }
+      body header .scroll-down .scroll {
+        font-family: "Josefin Sans", Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 2.8px; }
+  body .menu {
+    height: 80px;
+    width: 100%;
+    background-color: #5474fd; }
+  body .choose {
+    height: 685px;
+    width: 100%;
+    background: url("../images/why_choose_us_bg.png") center no-repeat; }
+  body .instructions {
+    height: 337px;
+    width: 100%;
+    background-color: #333333; }
+  body .first-book {
+    height: 700px;
+    width: 100%;
+    background: url("../images/book_now_1.png") center no-repeat; }
+  body .second-book {
+    height: 700px;
+    width: 100%;
+    background: url("../images/book_now_second.png") center no-repeat; }
+  body .what {
+    height: 731px;
+    width: 100%;
+    background: url("../images/testimonials_bg.png") center no-repeat; }
+  body footer {
+    height: 268px;
+    width: 100%;
+    background-color: #232323; }
+
+/*# sourceMappingURL=style.css.map */
